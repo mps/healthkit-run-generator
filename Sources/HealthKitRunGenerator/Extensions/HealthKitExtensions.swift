@@ -44,7 +44,7 @@ extension GeneratedRun {
     /// Create cadence samples as HKQuantitySample array.
     public func makeCadenceSamples() -> [HKQuantitySample] {
         let unit = HKUnit.count().unitDivided(by: .minute())
-        let type = HKQuantityType(.runningStepCount)
+        let type = HKQuantityType(.stepCount)
 
         return cadenceSamples.map { sample in
             let date = startDate.addingTimeInterval(sample.offset)
